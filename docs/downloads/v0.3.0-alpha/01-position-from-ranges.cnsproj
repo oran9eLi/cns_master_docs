@@ -1,0 +1,201 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/truth/position/component/0"
+                    },
+                    {
+                        "colorIndex": 1,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/truth/position/component/1"
+                    },
+                    {
+                        "colorIndex": 2,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/estimate/position/component/0"
+                    },
+                    {
+                        "colorIndex": 3,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/estimate/position/component/1"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "9a506a8b-0ee7-4375-a089-80a79d349d2f",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 95,
+                    "y": 95
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/estimate/position/component/0"
+                    },
+                    {
+                        "colorIndex": 1,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/estimate/position/component/1"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "xy",
+                "number": 2,
+                "persistentId": "39155804-b10e-4649-902b-5f7f35d4fc29",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 130,
+                    "y": 130
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/ranges/ranges/component/0"
+                    },
+                    {
+                        "colorIndex": 1,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/ranges/ranges/component/1"
+                    },
+                    {
+                        "colorIndex": 2,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/ranges/ranges/component/2"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 3,
+                "persistentId": "3445466d-f21d-4b1e-af60-599f507054bd",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 165,
+                    "y": 165
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/183613cf-260a-53f0-b52d-cb8aa62bf75a/node/estimate/residual"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 4,
+                "persistentId": "db856a70-bf33-44ef-8cb7-586b47c50fa6",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 200,
+                    "y": 200
+                }
+            }
+        ]
+    },
+    "formatVersion": 15,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "truth",
+                "fromPort": "position",
+                "id": "edge-1",
+                "toNode": "ranges",
+                "toPort": "position"
+            },
+            {
+                "fromNode": "ranges",
+                "fromPort": "ranges",
+                "id": "edge-2",
+                "toNode": "estimate",
+                "toPort": "ranges"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "truth",
+                "moduleType": "coordinate_source",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "sample_rate_hz": 10,
+                    "vx_m_s": 0,
+                    "vy_m_s": 0,
+                    "x0_m": 3,
+                    "y0_m": 4
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "ranges",
+                "moduleType": "range_simulator",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "anchors_m": [
+                        0,
+                        0,
+                        10,
+                        0,
+                        0,
+                        10
+                    ],
+                    "noise_std_m": 0,
+                    "seed": 0
+                },
+                "x": 340,
+                "y": 0
+            },
+            {
+                "id": "estimate",
+                "moduleType": "position_solver_2d",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "anchors_m": [
+                        0,
+                        0,
+                        10,
+                        0,
+                        0,
+                        10
+                    ],
+                    "max_residual_m": 1
+                },
+                "x": 680,
+                "y": 0
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "183613cf-260a-53f0-b52d-cb8aa62bf75a",
+    "simulationSpeed": 1,
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}

@@ -1,0 +1,145 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/23cf2a5d-471a-5da5-a742-39bd1f48ba18/node/sum/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "1b97323c-72d1-5bb3-9308-d2084c272216",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 60,
+                    "y": 60
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/23cf2a5d-471a-5da5-a742-39bd1f48ba18/node/sum/out/spectrum"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 2,
+                "persistentId": "6db61117-a471-5412-ba35-6efe390bb236",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 105,
+                    "y": 105
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/23cf2a5d-471a-5da5-a742-39bd1f48ba18/node/sum/out/spectrum"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "waterfall",
+                "number": 3,
+                "persistentId": "56e98406-9f73-5407-b429-1fd5d9f4fde7",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 150,
+                    "y": 150
+                }
+            }
+        ]
+    },
+    "formatVersion": 12,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "tone",
+                "fromPort": "out",
+                "id": "edge-1",
+                "toNode": "sum",
+                "toPort": "in1"
+            },
+            {
+                "fromNode": "high-tone",
+                "fromPort": "out",
+                "id": "edge-2",
+                "toNode": "sum",
+                "toPort": "in2"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "tone",
+                "moduleType": "signal_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 1,
+                    "frequency_hz": 64,
+                    "offset": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 1024,
+                    "waveform": "sine"
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "high-tone",
+                "moduleType": "signal_source",
+                "moduleVersion": 6,
+                "number": 2,
+                "parameters": {
+                    "amplitude": 0.5,
+                    "frequency_hz": 256,
+                    "offset": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 1024,
+                    "waveform": "sine"
+                },
+                "x": 340,
+                "y": 0
+            },
+            {
+                "id": "sum",
+                "moduleType": "add",
+                "moduleVersion": 5,
+                "number": 1,
+                "parameters": {
+                    "element_type": "numeric_f64",
+                    "num_inputs": 2,
+                    "vlen": 1
+                },
+                "x": 680,
+                "y": 0
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "23cf2a5d-471a-5da5-a742-39bd1f48ba18",
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}

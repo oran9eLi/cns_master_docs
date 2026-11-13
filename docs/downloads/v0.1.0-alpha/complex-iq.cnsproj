@@ -1,0 +1,348 @@
+{
+  "formatVersion": 10,
+  "projectId": "aada8532-32c5-56d6-9c8f-61a3c698021e",
+  "graph": {
+    "nodes": [
+      {
+        "id": "tone",
+        "moduleType": "complex_signal_source",
+        "moduleVersion": 6,
+        "parameters": {
+          "amplitude": 1,
+          "frequency_hz": 64,
+          "offset_imag": 0,
+          "offset_real": 0,
+          "phase_rad": 0,
+          "sample_rate_hz": 4096,
+          "waveform": "cosine"
+        },
+        "x": 0,
+        "y": 0,
+        "number": 1
+      },
+      {
+        "id": "high-tone",
+        "moduleType": "complex_signal_source",
+        "moduleVersion": 6,
+        "parameters": {
+          "amplitude": 0.5,
+          "frequency_hz": 768,
+          "offset_imag": 0,
+          "offset_real": 0,
+          "phase_rad": 0,
+          "sample_rate_hz": 4096,
+          "waveform": "cosine"
+        },
+        "x": 300,
+        "y": 0,
+        "number": 2
+      },
+      {
+        "id": "noise",
+        "moduleType": "complex_noise_source",
+        "moduleVersion": 2,
+        "parameters": {
+          "amplitude": 0.1,
+          "distribution": "gaussian",
+          "sample_rate_hz": 4096,
+          "seed": 7,
+          "seed_mode": "fixed"
+        },
+        "x": 600,
+        "y": 0,
+        "number": 1
+      },
+      {
+        "id": "sum",
+        "moduleType": "complex_add",
+        "moduleVersion": 5,
+        "parameters": {
+          "num_inputs": 3,
+          "vlen": 1
+        },
+        "x": 900,
+        "y": 0,
+        "number": 1
+      },
+      {
+        "id": "gain",
+        "moduleType": "complex_gain",
+        "moduleVersion": 5,
+        "parameters": {
+          "gain_imag": 1,
+          "gain_real": 0,
+          "vlen": 1
+        },
+        "x": 0,
+        "y": 230,
+        "number": 1
+      },
+      {
+        "id": "product",
+        "moduleType": "complex_multiply",
+        "moduleVersion": 5,
+        "parameters": {
+          "num_inputs": 2,
+          "vlen": 1
+        },
+        "x": 300,
+        "y": 230,
+        "number": 1
+      },
+      {
+        "id": "delay",
+        "moduleType": "complex_delay",
+        "moduleVersion": 6,
+        "parameters": {
+          "delay_samples": 8,
+          "num_ports": 1,
+          "vlen": 1
+        },
+        "x": 600,
+        "y": 230,
+        "number": 1
+      },
+      {
+        "id": "low",
+        "moduleType": "complex_low_pass",
+        "moduleVersion": 4,
+        "parameters": {
+          "cutoff_hz": 256,
+          "decimation": 1,
+          "gain": 1,
+          "interpolation": 1,
+          "sample_rate_hz": 4096,
+          "transition_hz": 128,
+          "window": "hamming",
+          "window_param": 6.76
+        },
+        "x": 900,
+        "y": 230,
+        "number": 1
+      },
+      {
+        "id": "high",
+        "moduleType": "complex_high_pass",
+        "moduleVersion": 4,
+        "parameters": {
+          "cutoff_hz": 512,
+          "decimation": 1,
+          "gain": 1,
+          "interpolation": 1,
+          "sample_rate_hz": 4096,
+          "transition_hz": 128,
+          "window": "hamming",
+          "window_param": 6.76
+        },
+        "x": 0,
+        "y": 460,
+        "number": 1
+      },
+      {
+        "id": "band",
+        "moduleType": "complex_band_pass",
+        "moduleVersion": 4,
+        "parameters": {
+          "coefficient_type": "real",
+          "decimation": 1,
+          "gain": 1,
+          "high_cutoff_hz": 900,
+          "interpolation": 1,
+          "low_cutoff_hz": 600,
+          "sample_rate_hz": 4096,
+          "transition_hz": 128,
+          "window": "hamming",
+          "window_param": 6.76
+        },
+        "x": 300,
+        "y": 460,
+        "number": 1
+      },
+      {
+        "id": "fir",
+        "moduleType": "complex_fir",
+        "moduleVersion": 6,
+        "parameters": {
+          "coefficient_type": "complex",
+          "decimation": 1,
+          "interpolation": 1,
+          "sample_delay": 0,
+          "taps_imag": [
+            0,
+            0.5
+          ],
+          "taps_real": [
+            1,
+            0
+          ]
+        },
+        "x": 600,
+        "y": 460,
+        "number": 1
+      },
+      {
+        "id": "split",
+        "moduleType": "iq_split",
+        "moduleVersion": 5,
+        "parameters": {
+          "vlen": 1
+        },
+        "x": 900,
+        "y": 460,
+        "number": 1
+      },
+      {
+        "id": "combine",
+        "moduleType": "iq_combine",
+        "moduleVersion": 5,
+        "parameters": {
+          "vlen": 1
+        },
+        "x": 0,
+        "y": 690,
+        "number": 1
+      }
+    ],
+    "connections": [
+      {
+        "id": "edge-1",
+        "fromNode": "tone",
+        "fromPort": "out",
+        "toNode": "sum",
+        "toPort": "in1"
+      },
+      {
+        "id": "edge-2",
+        "fromNode": "high-tone",
+        "fromPort": "out",
+        "toNode": "sum",
+        "toPort": "in2"
+      },
+      {
+        "id": "edge-3",
+        "fromNode": "noise",
+        "fromPort": "out",
+        "toNode": "sum",
+        "toPort": "in3"
+      },
+      {
+        "id": "edge-4",
+        "fromNode": "tone",
+        "fromPort": "out",
+        "toNode": "gain",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-5",
+        "fromNode": "tone",
+        "fromPort": "out",
+        "toNode": "product",
+        "toPort": "in1"
+      },
+      {
+        "id": "edge-6",
+        "fromNode": "high-tone",
+        "fromPort": "out",
+        "toNode": "product",
+        "toPort": "in2"
+      },
+      {
+        "id": "edge-7",
+        "fromNode": "tone",
+        "fromPort": "out",
+        "toNode": "delay",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-8",
+        "fromNode": "tone",
+        "fromPort": "out",
+        "toNode": "fir",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-9",
+        "fromNode": "sum",
+        "fromPort": "out",
+        "toNode": "low",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-10",
+        "fromNode": "sum",
+        "fromPort": "out",
+        "toNode": "high",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-11",
+        "fromNode": "sum",
+        "fromPort": "out",
+        "toNode": "band",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-12",
+        "fromNode": "sum",
+        "fromPort": "out",
+        "toNode": "split",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-13",
+        "fromNode": "split",
+        "fromPort": "i",
+        "toNode": "combine",
+        "toPort": "i"
+      },
+      {
+        "id": "edge-14",
+        "fromNode": "split",
+        "fromPort": "q",
+        "toNode": "combine",
+        "toPort": "q"
+      }
+    ]
+  },
+  "analysis": {
+    "tools": [
+      {
+        "persistentId": "2666c14d-3321-501c-87fb-e5e35edaee8d",
+        "kind": "observer",
+        "number": 1,
+        "inputA": "project/aada8532-32c5-56d6-9c8f-61a3c698021e/node/sum/out",
+        "inputB": "",
+        "mode": "iq",
+        "maxPoints": 2048,
+        "refreshHz": 10,
+        "visible": true,
+        "windowLayout": {
+          "x": 80,
+          "y": 80,
+          "width": 840,
+          "height": 600,
+          "tab": 0
+        }
+      },
+      {
+        "persistentId": "d82720ad-27af-57f1-8786-67b2c7627055",
+        "kind": "observer",
+        "number": 2,
+        "inputA": "project/aada8532-32c5-56d6-9c8f-61a3c698021e/node/low/out/spectrum",
+        "inputB": "",
+        "mode": "overlay",
+        "maxPoints": 2048,
+        "refreshHz": 10,
+        "visible": true,
+        "windowLayout": {
+          "x": 130,
+          "y": 130,
+          "width": 840,
+          "height": 600,
+          "tab": 0
+        }
+      }
+    ]
+  },
+  "lastRun": null
+}

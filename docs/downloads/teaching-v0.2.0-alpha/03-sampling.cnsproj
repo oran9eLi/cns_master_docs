@@ -1,0 +1,80 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/6210d33a-8d11-5187-b433-375b4f4afdef/node/tone/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "145c685d-ce3c-584f-83cf-d42e18f8f0ab",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 60,
+                    "y": 60
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/6210d33a-8d11-5187-b433-375b4f4afdef/node/tone/out/spectrum"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 2,
+                "persistentId": "130ac8be-3b06-5671-9732-b4afe0098832",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 105,
+                    "y": 105
+                }
+            }
+        ]
+    },
+    "formatVersion": 12,
+    "graph": {
+        "connections": [
+        ],
+        "nodes": [
+            {
+                "id": "tone",
+                "moduleType": "signal_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 1,
+                    "frequency_hz": 64,
+                    "offset": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 1024,
+                    "waveform": "sine"
+                },
+                "x": 0,
+                "y": 0
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "6210d33a-8d11-5187-b433-375b4f4afdef",
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}

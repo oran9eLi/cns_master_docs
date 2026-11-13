@@ -1,0 +1,151 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/828e6eeb-92e8-5900-9e8f-ebff65495f2d/node/reference/out"
+                    },
+                    {
+                        "colorIndex": 1,
+                        "variableId": "project/828e6eeb-92e8-5900-9e8f-ebff65495f2d/node/delayed/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "f54bd1b3-9968-4192-ac47-4faf113e37fd",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 95,
+                    "y": 95
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/828e6eeb-92e8-5900-9e8f-ebff65495f2d/node/correlation/correlation"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 2,
+                "persistentId": "3dd60179-20ea-40b8-9065-c21cee6c38cb",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 130,
+                    "y": 130
+                }
+            }
+        ]
+    },
+    "formatVersion": 15,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "reference",
+                "fromPort": "out",
+                "id": "edge-1",
+                "toNode": "delayed",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "reference",
+                "fromPort": "out",
+                "id": "edge-2",
+                "toNode": "correlation",
+                "toPort": "ref"
+            },
+            {
+                "fromNode": "delayed",
+                "fromPort": "out",
+                "id": "edge-3",
+                "toNode": "correlation",
+                "toPort": "rx"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "reference",
+                "moduleType": "vector_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "data_imag": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "data_real": [
+                        1,
+                        2,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "element_type": "numeric_f64",
+                    "sample_rate_hz": 1000,
+                    "symbol_count": 2,
+                    "tags": [
+                    ],
+                    "vlen": 1
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "delayed",
+                "moduleType": "delay",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "delay_samples": 2,
+                    "element_type": "numeric_f64",
+                    "num_ports": 1,
+                    "vlen": 1
+                },
+                "x": 340,
+                "y": 0
+            },
+            {
+                "id": "correlation",
+                "moduleType": "correlator",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "frame_length": 8
+                },
+                "x": 680,
+                "y": 0
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "828e6eeb-92e8-5900-9e8f-ebff65495f2d",
+    "simulationSpeed": 1,
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}

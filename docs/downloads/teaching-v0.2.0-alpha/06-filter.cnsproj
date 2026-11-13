@@ -1,0 +1,196 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/0e06826f-cacc-5e4f-8d05-0eba3f7a8fe4/node/sum/out"
+                    },
+                    {
+                        "colorIndex": 1,
+                        "variableId": "project/0e06826f-cacc-5e4f-8d05-0eba3f7a8fe4/node/low/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "82439a7b-70a9-5c68-b15e-5b97eb4fe954",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 60,
+                    "y": 60
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/0e06826f-cacc-5e4f-8d05-0eba3f7a8fe4/node/sum/out/spectrum"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 2,
+                "persistentId": "d5a064a6-41db-55e3-9b54-99f0afd3c1e1",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 105,
+                    "y": 105
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/0e06826f-cacc-5e4f-8d05-0eba3f7a8fe4/node/low/out/spectrum"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 3,
+                "persistentId": "142c81e3-b52a-5845-bf62-ff537389fc82",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 150,
+                    "y": 150
+                }
+            }
+        ]
+    },
+    "formatVersion": 12,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "tone",
+                "fromPort": "out",
+                "id": "edge-1",
+                "toNode": "sum",
+                "toPort": "in1"
+            },
+            {
+                "fromNode": "high-tone",
+                "fromPort": "out",
+                "id": "edge-2",
+                "toNode": "sum",
+                "toPort": "in2"
+            },
+            {
+                "fromNode": "noise",
+                "fromPort": "out",
+                "id": "edge-3",
+                "toNode": "sum",
+                "toPort": "in3"
+            },
+            {
+                "fromNode": "sum",
+                "fromPort": "out",
+                "id": "edge-4",
+                "toNode": "low",
+                "toPort": "in"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "tone",
+                "moduleType": "signal_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 1,
+                    "frequency_hz": 64,
+                    "offset": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 4096,
+                    "waveform": "sine"
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "high-tone",
+                "moduleType": "signal_source",
+                "moduleVersion": 6,
+                "number": 2,
+                "parameters": {
+                    "amplitude": 0.5,
+                    "frequency_hz": 768,
+                    "offset": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 4096,
+                    "waveform": "sine"
+                },
+                "x": 340,
+                "y": 0
+            },
+            {
+                "id": "noise",
+                "moduleType": "noise_source",
+                "moduleVersion": 2,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 0.1,
+                    "distribution": "gaussian",
+                    "sample_rate_hz": 4096,
+                    "seed": 7,
+                    "seed_mode": "fixed"
+                },
+                "x": 680,
+                "y": 0
+            },
+            {
+                "id": "sum",
+                "moduleType": "add",
+                "moduleVersion": 5,
+                "number": 1,
+                "parameters": {
+                    "element_type": "numeric_f64",
+                    "num_inputs": 3,
+                    "vlen": 1
+                },
+                "x": 0,
+                "y": 260
+            },
+            {
+                "id": "low",
+                "moduleType": "low_pass",
+                "moduleVersion": 4,
+                "number": 1,
+                "parameters": {
+                    "cutoff_hz": 256,
+                    "decimation": 1,
+                    "gain": 1,
+                    "interpolation": 1,
+                    "sample_rate_hz": 4096,
+                    "transition_hz": 128,
+                    "window": "hamming",
+                    "window_param": 6.76
+                },
+                "x": 340,
+                "y": 260
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "0e06826f-cacc-5e4f-8d05-0eba3f7a8fe4",
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}

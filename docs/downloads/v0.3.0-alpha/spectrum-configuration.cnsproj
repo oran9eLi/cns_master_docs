@@ -1,0 +1,97 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/f03589c0-f977-5569-8579-28b8c041bac6/node/real-tone/out/spectrum"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "f4938061-3b4d-5a1c-be2c-701aad6fd334",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 80,
+                    "y": 80
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/f03589c0-f977-5569-8579-28b8c041bac6/node/negative-tone/out/spectrum"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 2,
+                "persistentId": "901127a7-68da-5545-8d87-802708d10e64",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 130,
+                    "y": 130
+                }
+            }
+        ]
+    },
+    "formatVersion": 12,
+    "graph": {
+        "connections": [
+        ],
+        "nodes": [
+            {
+                "id": "real-tone",
+                "moduleType": "signal_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 1.25,
+                    "frequency_hz": 256,
+                    "offset": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 4096,
+                    "waveform": "cosine"
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "negative-tone",
+                "moduleType": "complex_signal_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 0.625,
+                    "frequency_hz": -512,
+                    "offset_imag": 0,
+                    "offset_real": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 4096,
+                    "waveform": "cosine"
+                },
+                "x": 300,
+                "y": 0
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "f03589c0-f977-5569-8579-28b8c041bac6",
+    "spectrum": {
+        "fft_length": 512,
+        "overlap_percent": 75,
+        "window": "hamming_periodic"
+    }
+}

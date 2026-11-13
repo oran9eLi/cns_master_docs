@@ -1,0 +1,139 @@
+{
+  "formatVersion": 10,
+  "projectId": "39542047-c5b2-5c47-82f6-86138e2e0ac9",
+  "graph": {
+    "nodes": [
+      {
+        "id": "constant",
+        "moduleType": "signal_source",
+        "moduleVersion": 6,
+        "parameters": {
+          "amplitude": 1,
+          "frequency_hz": 0,
+          "offset": 0,
+          "phase_rad": 0,
+          "sample_rate_hz": 1024,
+          "waveform": "constant"
+        },
+        "x": 0,
+        "y": 0,
+        "number": 1
+      },
+      {
+        "id": "ramp",
+        "moduleType": "vector_source",
+        "moduleVersion": 6,
+        "parameters": {
+          "data_imag": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "data_real": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "element_type": "numeric_f64",
+          "sample_rate_hz": 1024,
+          "symbol_count": 2,
+          "tags": [],
+          "vlen": 1
+        },
+        "x": 300,
+        "y": 0,
+        "number": 1
+      },
+      {
+        "id": "delay",
+        "moduleType": "delay",
+        "moduleVersion": 6,
+        "parameters": {
+          "delay_samples": 0,
+          "element_type": "numeric_f64",
+          "num_ports": 1,
+          "vlen": 1
+        },
+        "x": 600,
+        "y": 0,
+        "number": 1
+      }
+    ],
+    "connections": [
+      {
+        "id": "edge-1",
+        "fromNode": "ramp",
+        "fromPort": "out",
+        "toNode": "delay",
+        "toPort": "in"
+      }
+    ]
+  },
+  "analysis": {
+    "tools": [
+      {
+        "persistentId": "482be348-6d97-555d-9958-fe2eb3f5c591",
+        "kind": "observer",
+        "number": 1,
+        "inputA": "project/39542047-c5b2-5c47-82f6-86138e2e0ac9/node/constant/out",
+        "inputB": "",
+        "mode": "overlay",
+        "maxPoints": 2048,
+        "refreshHz": 10,
+        "visible": true,
+        "windowLayout": {
+          "x": 80,
+          "y": 80,
+          "width": 840,
+          "height": 600,
+          "tab": 0
+        }
+      },
+      {
+        "persistentId": "db67898b-4c71-5a5d-9b16-b8c1f3db3273",
+        "kind": "observer",
+        "number": 2,
+        "inputA": "project/39542047-c5b2-5c47-82f6-86138e2e0ac9/node/delay/out",
+        "inputB": "",
+        "mode": "overlay",
+        "maxPoints": 2048,
+        "refreshHz": 10,
+        "visible": true,
+        "windowLayout": {
+          "x": 130,
+          "y": 130,
+          "width": 840,
+          "height": 600,
+          "tab": 0
+        }
+      }
+    ]
+  },
+  "lastRun": null
+}

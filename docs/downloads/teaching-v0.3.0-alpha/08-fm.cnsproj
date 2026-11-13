@@ -1,0 +1,159 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/986c2690-cad4-52d7-b8a2-bc11e3cc4fcb/node/constant/out"
+                    },
+                    {
+                        "colorIndex": 1,
+                        "variableId": "project/986c2690-cad4-52d7-b8a2-bc11e3cc4fcb/node/demod/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "f04aab19-a413-5e93-b236-a65997b75138",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 60,
+                    "y": 60
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/986c2690-cad4-52d7-b8a2-bc11e3cc4fcb/node/fm/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "iq",
+                "number": 2,
+                "persistentId": "2460892d-3ff5-59e6-a32b-622a5155a5f1",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 105,
+                    "y": 105
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/986c2690-cad4-52d7-b8a2-bc11e3cc4fcb/node/fm/out/spectrum"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 3,
+                "persistentId": "377dc3c2-de64-5b4e-b1c1-e374d2649b73",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 150,
+                    "y": 150
+                }
+            }
+        ]
+    },
+    "formatVersion": 12,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "constant",
+                "fromPort": "out",
+                "id": "edge-1",
+                "toNode": "fm",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "fm",
+                "fromPort": "out",
+                "id": "edge-2",
+                "toNode": "demod",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "fm",
+                "fromPort": "out",
+                "id": "edge-3",
+                "toNode": "magphase",
+                "toPort": "in"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "constant",
+                "moduleType": "signal_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 1,
+                    "frequency_hz": 0,
+                    "offset": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 4096,
+                    "waveform": "constant"
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "fm",
+                "moduleType": "frequency_modulator",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "sensitivity": 0.39269908169872414
+                },
+                "x": 340,
+                "y": 0
+            },
+            {
+                "id": "demod",
+                "moduleType": "quadrature_demod",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "gain": 2.5464790894703255
+                },
+                "x": 680,
+                "y": 0
+            },
+            {
+                "id": "magphase",
+                "moduleType": "magphase_split",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                },
+                "x": 0,
+                "y": 260
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "986c2690-cad4-52d7-b8a2-bc11e3cc4fcb",
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}

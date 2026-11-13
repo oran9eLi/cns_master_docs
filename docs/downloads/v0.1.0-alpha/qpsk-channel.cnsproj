@@ -1,0 +1,206 @@
+{
+  "formatVersion": 10,
+  "projectId": "274d08a5-4123-54e6-bc9a-3eea0cc446be",
+  "graph": {
+    "nodes": [
+      {
+        "id": "symbols",
+        "moduleType": "random_symbols",
+        "moduleVersion": 4,
+        "parameters": {
+          "constellation": "qpsk",
+          "dimensionality": 1,
+          "maximum": 4,
+          "minimum": 0,
+          "normalization": "none",
+          "points_imag": [
+            -0.7071067811865475,
+            0.7071067811865475,
+            -0.7071067811865475,
+            0.7071067811865475
+          ],
+          "points_real": [
+            -0.7071067811865475,
+            -0.7071067811865475,
+            0.7071067811865475,
+            0.7071067811865475
+          ],
+          "sample_rate_hz": 4096,
+          "seed": 7,
+          "seed_mode": "fixed"
+        },
+        "x": 0,
+        "y": 0,
+        "number": 1
+      },
+      {
+        "id": "mapper",
+        "moduleType": "symbol_mapper",
+        "moduleVersion": 6,
+        "parameters": {
+          "constellation": "qpsk",
+          "dimensionality": 1,
+          "normalization": "none",
+          "points_imag": [
+            -0.7071067811865475,
+            0.7071067811865475,
+            -0.7071067811865475,
+            0.7071067811865475
+          ],
+          "points_real": [
+            -0.7071067811865475,
+            -0.7071067811865475,
+            0.7071067811865475,
+            0.7071067811865475
+          ]
+        },
+        "x": 300,
+        "y": 0,
+        "number": 1
+      },
+      {
+        "id": "direct",
+        "moduleType": "symbol_slicer",
+        "moduleVersion": 4,
+        "parameters": {
+          "constellation": "qpsk",
+          "dimensionality": 1,
+          "normalization": "none",
+          "points_imag": [
+            -0.7071067811865475,
+            0.7071067811865475,
+            -0.7071067811865475,
+            0.7071067811865475
+          ],
+          "points_real": [
+            -0.7071067811865475,
+            -0.7071067811865475,
+            0.7071067811865475,
+            0.7071067811865475
+          ]
+        },
+        "x": 600,
+        "y": 0,
+        "number": 1
+      },
+      {
+        "id": "channel",
+        "moduleType": "channel_model",
+        "moduleVersion": 6,
+        "parameters": {
+          "block_tags": false,
+          "epsilon": 1,
+          "frequency_hz": 0,
+          "noise_amplitude": 0,
+          "noise_seed": 7,
+          "seed_mode": "fixed",
+          "taps_imag": [
+            0
+          ],
+          "taps_real": [
+            1
+          ]
+        },
+        "x": 900,
+        "y": 0,
+        "number": 1
+      },
+      {
+        "id": "received",
+        "moduleType": "symbol_slicer",
+        "moduleVersion": 4,
+        "parameters": {
+          "constellation": "qpsk",
+          "dimensionality": 1,
+          "normalization": "none",
+          "points_imag": [
+            -0.7071067811865475,
+            0.7071067811865475,
+            -0.7071067811865475,
+            0.7071067811865475
+          ],
+          "points_real": [
+            -0.7071067811865475,
+            -0.7071067811865475,
+            0.7071067811865475,
+            0.7071067811865475
+          ]
+        },
+        "x": 0,
+        "y": 230,
+        "number": 2
+      }
+    ],
+    "connections": [
+      {
+        "id": "edge-1",
+        "fromNode": "symbols",
+        "fromPort": "out",
+        "toNode": "mapper",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-2",
+        "fromNode": "mapper",
+        "fromPort": "out",
+        "toNode": "direct",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-3",
+        "fromNode": "mapper",
+        "fromPort": "out",
+        "toNode": "channel",
+        "toPort": "in"
+      },
+      {
+        "id": "edge-4",
+        "fromNode": "channel",
+        "fromPort": "out",
+        "toNode": "received",
+        "toPort": "in"
+      }
+    ]
+  },
+  "analysis": {
+    "tools": [
+      {
+        "persistentId": "6f4726f3-1618-598d-9c9b-99a4b9328e60",
+        "kind": "observer",
+        "number": 1,
+        "inputA": "project/274d08a5-4123-54e6-bc9a-3eea0cc446be/node/mapper/out",
+        "inputB": "",
+        "mode": "constellation",
+        "maxPoints": 2048,
+        "refreshHz": 10,
+        "visible": true,
+        "windowLayout": {
+          "x": 80,
+          "y": 80,
+          "width": 840,
+          "height": 600,
+          "tab": 0
+        }
+      },
+      {
+        "persistentId": "853e5327-72fe-5f4e-b6f9-4b66d29f383f",
+        "kind": "observer",
+        "number": 2,
+        "inputA": "project/274d08a5-4123-54e6-bc9a-3eea0cc446be/node/symbols/out",
+        "inputB": "",
+        "mode": "overlay",
+        "maxPoints": 2048,
+        "refreshHz": 10,
+        "visible": true,
+        "windowLayout": {
+          "x": 130,
+          "y": 130,
+          "width": 840,
+          "height": 600,
+          "tab": 0
+        }
+      }
+    ]
+  },
+  "lastRun": null
+}

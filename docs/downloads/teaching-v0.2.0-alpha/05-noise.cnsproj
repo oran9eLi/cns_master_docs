@@ -1,0 +1,126 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/f5c6a3dc-789f-560d-a6fd-c78791c23583/node/tone/out"
+                    },
+                    {
+                        "colorIndex": 1,
+                        "variableId": "project/f5c6a3dc-789f-560d-a6fd-c78791c23583/node/sum/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "6ddd2baf-df8c-554f-b740-8cfb1a2afe53",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 60,
+                    "y": 60
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/f5c6a3dc-789f-560d-a6fd-c78791c23583/node/noise/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 2,
+                "persistentId": "ac70380a-64fa-5956-bce2-a9dae7865962",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 105,
+                    "y": 105
+                }
+            }
+        ]
+    },
+    "formatVersion": 12,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "tone",
+                "fromPort": "out",
+                "id": "edge-1",
+                "toNode": "sum",
+                "toPort": "in1"
+            },
+            {
+                "fromNode": "noise",
+                "fromPort": "out",
+                "id": "edge-2",
+                "toNode": "sum",
+                "toPort": "in2"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "tone",
+                "moduleType": "signal_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 1,
+                    "frequency_hz": 64,
+                    "offset": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 4096,
+                    "waveform": "sine"
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "noise",
+                "moduleType": "noise_source",
+                "moduleVersion": 2,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 0.2,
+                    "distribution": "gaussian",
+                    "sample_rate_hz": 4096,
+                    "seed": 7,
+                    "seed_mode": "fixed"
+                },
+                "x": 340,
+                "y": 0
+            },
+            {
+                "id": "sum",
+                "moduleType": "add",
+                "moduleVersion": 5,
+                "number": 1,
+                "parameters": {
+                    "element_type": "numeric_f64",
+                    "num_inputs": 2,
+                    "vlen": 1
+                },
+                "x": 680,
+                "y": 0
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "f5c6a3dc-789f-560d-a6fd-c78791c23583",
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}

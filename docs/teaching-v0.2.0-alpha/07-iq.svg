@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="410" viewBox="0 0 900 410">
+<rect width="100%" height="100%" fill="white"/>
+<text x="30" y="26" font-family="sans-serif" font-size="17">07-iq：真实 GNU 运行数据（2048 项）</text>
+<rect x="65" y="75" width="350" height="250" fill="none" stroke="#333"/>
+<text x="65.0" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">0</text>
+<text x="58" y="329.0" text-anchor="end" font-family="sans-serif" font-size="12">-1.16</text>
+<text x="152.5" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">7.57</text>
+<text x="58" y="266.5" text-anchor="end" font-family="sans-serif" font-size="12">-0.58</text>
+<text x="240.0" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">15.1</text>
+<text x="58" y="204.0" text-anchor="end" font-family="sans-serif" font-size="12">0</text>
+<text x="327.5" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">22.7</text>
+<text x="58" y="141.5" text-anchor="end" font-family="sans-serif" font-size="12">0.58</text>
+<text x="415.0" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">30.3</text>
+<text x="58" y="79.0" text-anchor="end" font-family="sans-serif" font-size="12">1.16</text>
+<polyline points="65.00,92.24 76.29,100.44 87.58,123.80 98.87,158.76 110.16,200.00 121.45,241.24 132.74,276.20 144.03,299.56 155.32,307.76 166.61,299.56 177.90,276.20 189.19,241.24 200.48,200.00 211.77,158.76 223.06,123.80 234.35,100.44 245.65,92.24 256.94,100.44 268.23,123.80 279.52,158.76 290.81,200.00 302.10,241.24 313.39,276.20 324.68,299.56 335.97,307.76 347.26,299.56 358.55,276.20 369.84,241.24 381.13,200.00 392.42,158.76 403.71,123.80 415.00,100.44" fill="none" stroke="#0759a6" stroke-width="1.3"/>
+<circle cx="65.00" cy="92.24" r="2.3" fill="#0759a6"/>
+<circle cx="76.29" cy="100.44" r="2.3" fill="#0759a6"/>
+<circle cx="87.58" cy="123.80" r="2.3" fill="#0759a6"/>
+<circle cx="98.87" cy="158.76" r="2.3" fill="#0759a6"/>
+<circle cx="110.16" cy="200.00" r="2.3" fill="#0759a6"/>
+<circle cx="121.45" cy="241.24" r="2.3" fill="#0759a6"/>
+<circle cx="132.74" cy="276.20" r="2.3" fill="#0759a6"/>
+<circle cx="144.03" cy="299.56" r="2.3" fill="#0759a6"/>
+<circle cx="155.32" cy="307.76" r="2.3" fill="#0759a6"/>
+<circle cx="166.61" cy="299.56" r="2.3" fill="#0759a6"/>
+<circle cx="177.90" cy="276.20" r="2.3" fill="#0759a6"/>
+<circle cx="189.19" cy="241.24" r="2.3" fill="#0759a6"/>
+<circle cx="200.48" cy="200.00" r="2.3" fill="#0759a6"/>
+<circle cx="211.77" cy="158.76" r="2.3" fill="#0759a6"/>
+<circle cx="223.06" cy="123.80" r="2.3" fill="#0759a6"/>
+<circle cx="234.35" cy="100.44" r="2.3" fill="#0759a6"/>
+<circle cx="245.65" cy="92.24" r="2.3" fill="#0759a6"/>
+<circle cx="256.94" cy="100.44" r="2.3" fill="#0759a6"/>
+<circle cx="268.23" cy="123.80" r="2.3" fill="#0759a6"/>
+<circle cx="279.52" cy="158.76" r="2.3" fill="#0759a6"/>
+<circle cx="290.81" cy="200.00" r="2.3" fill="#0759a6"/>
+<circle cx="302.10" cy="241.24" r="2.3" fill="#0759a6"/>
+<circle cx="313.39" cy="276.20" r="2.3" fill="#0759a6"/>
+<circle cx="324.68" cy="299.56" r="2.3" fill="#0759a6"/>
+<circle cx="335.97" cy="307.76" r="2.3" fill="#0759a6"/>
+<circle cx="347.26" cy="299.56" r="2.3" fill="#0759a6"/>
+<circle cx="358.55" cy="276.20" r="2.3" fill="#0759a6"/>
+<circle cx="369.84" cy="241.24" r="2.3" fill="#0759a6"/>
+<circle cx="381.13" cy="200.00" r="2.3" fill="#0759a6"/>
+<circle cx="392.42" cy="158.76" r="2.3" fill="#0759a6"/>
+<circle cx="403.71" cy="123.80" r="2.3" fill="#0759a6"/>
+<circle cx="415.00" cy="100.44" r="2.3" fill="#0759a6"/>
+<text x="65" y="53" fill="#0759a6" font-family="sans-serif" font-size="12">I</text>
+<polyline points="65.00,200.00 76.29,158.76 87.58,123.80 98.87,100.44 110.16,92.24 121.45,100.44 132.74,123.80 144.03,158.76 155.32,200.00 166.61,241.24 177.90,276.20 189.19,299.56 200.48,307.76 211.77,299.56 223.06,276.20 234.35,241.24 245.65,200.00 256.94,158.76 268.23,123.80 279.52,100.44 290.81,92.24 302.10,100.44 313.39,123.80 324.68,158.76 335.97,200.00 347.26,241.24 358.55,276.20 369.84,299.56 381.13,307.76 392.42,299.56 403.71,276.20 415.00,241.24" fill="none" stroke="#a84b0c" stroke-width="1.3"/>
+<circle cx="65.00" cy="200.00" r="2.3" fill="#a84b0c"/>
+<circle cx="76.29" cy="158.76" r="2.3" fill="#a84b0c"/>
+<circle cx="87.58" cy="123.80" r="2.3" fill="#a84b0c"/>
+<circle cx="98.87" cy="100.44" r="2.3" fill="#a84b0c"/>
+<circle cx="110.16" cy="92.24" r="2.3" fill="#a84b0c"/>
+<circle cx="121.45" cy="100.44" r="2.3" fill="#a84b0c"/>
+<circle cx="132.74" cy="123.80" r="2.3" fill="#a84b0c"/>
+<circle cx="144.03" cy="158.76" r="2.3" fill="#a84b0c"/>
+<circle cx="155.32" cy="200.00" r="2.3" fill="#a84b0c"/>
+<circle cx="166.61" cy="241.24" r="2.3" fill="#a84b0c"/>
+<circle cx="177.90" cy="276.20" r="2.3" fill="#a84b0c"/>
+<circle cx="189.19" cy="299.56" r="2.3" fill="#a84b0c"/>
+<circle cx="200.48" cy="307.76" r="2.3" fill="#a84b0c"/>
+<circle cx="211.77" cy="299.56" r="2.3" fill="#a84b0c"/>
+<circle cx="223.06" cy="276.20" r="2.3" fill="#a84b0c"/>
+<circle cx="234.35" cy="241.24" r="2.3" fill="#a84b0c"/>
+<circle cx="245.65" cy="200.00" r="2.3" fill="#a84b0c"/>
+<circle cx="256.94" cy="158.76" r="2.3" fill="#a84b0c"/>
+<circle cx="268.23" cy="123.80" r="2.3" fill="#a84b0c"/>
+<circle cx="279.52" cy="100.44" r="2.3" fill="#a84b0c"/>
+<circle cx="290.81" cy="92.24" r="2.3" fill="#a84b0c"/>
+<circle cx="302.10" cy="100.44" r="2.3" fill="#a84b0c"/>
+<circle cx="313.39" cy="123.80" r="2.3" fill="#a84b0c"/>
+<circle cx="324.68" cy="158.76" r="2.3" fill="#a84b0c"/>
+<circle cx="335.97" cy="200.00" r="2.3" fill="#a84b0c"/>
+<circle cx="347.26" cy="241.24" r="2.3" fill="#a84b0c"/>
+<circle cx="358.55" cy="276.20" r="2.3" fill="#a84b0c"/>
+<circle cx="369.84" cy="299.56" r="2.3" fill="#a84b0c"/>
+<circle cx="381.13" cy="307.76" r="2.3" fill="#a84b0c"/>
+<circle cx="392.42" cy="299.56" r="2.3" fill="#a84b0c"/>
+<circle cx="403.71" cy="276.20" r="2.3" fill="#a84b0c"/>
+<circle cx="415.00" cy="241.24" r="2.3" fill="#a84b0c"/>
+<text x="65" y="69" fill="#a84b0c" font-family="sans-serif" font-size="12">Q</text>
+<text x="240.0" y="368" text-anchor="middle" font-family="sans-serif" font-size="13">时间 / ms</text>
+<text x="65" y="390" font-family="sans-serif" font-size="12">I、Q（归一化幅度）</text>
+<rect x="560" y="75" width="250" height="250" fill="none" stroke="#333"/>
+<text x="560.0" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">-1.08</text>
+<text x="553" y="329.0" text-anchor="end" font-family="sans-serif" font-size="12">-1.08</text>
+<text x="622.5" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">-0.54</text>
+<text x="553" y="266.5" text-anchor="end" font-family="sans-serif" font-size="12">-0.54</text>
+<text x="685.0" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">0</text>
+<text x="553" y="204.0" text-anchor="end" font-family="sans-serif" font-size="12">0</text>
+<text x="747.5" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">0.54</text>
+<text x="553" y="141.5" text-anchor="end" font-family="sans-serif" font-size="12">0.54</text>
+<text x="810.0" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">1.08</text>
+<text x="553" y="79.0" text-anchor="end" font-family="sans-serif" font-size="12">1.08</text>
+<circle cx="800.74" cy="200.00" r="2.3" fill="#0759a6"/>
+<circle cx="791.93" cy="155.71" r="2.3" fill="#0759a6"/>
+<circle cx="766.84" cy="118.16" r="2.3" fill="#0759a6"/>
+<circle cx="729.29" cy="93.07" r="2.3" fill="#0759a6"/>
+<circle cx="685.00" cy="84.26" r="2.3" fill="#0759a6"/>
+<circle cx="640.71" cy="93.07" r="2.3" fill="#0759a6"/>
+<circle cx="603.16" cy="118.16" r="2.3" fill="#0759a6"/>
+<circle cx="578.07" cy="155.71" r="2.3" fill="#0759a6"/>
+<circle cx="569.26" cy="200.00" r="2.3" fill="#0759a6"/>
+<circle cx="578.07" cy="244.29" r="2.3" fill="#0759a6"/>
+<circle cx="603.16" cy="281.84" r="2.3" fill="#0759a6"/>
+<circle cx="640.71" cy="306.93" r="2.3" fill="#0759a6"/>
+<circle cx="685.00" cy="315.74" r="2.3" fill="#0759a6"/>
+<circle cx="729.29" cy="306.93" r="2.3" fill="#0759a6"/>
+<circle cx="766.84" cy="281.84" r="2.3" fill="#0759a6"/>
+<circle cx="791.93" cy="244.29" r="2.3" fill="#0759a6"/>
+<text x="560" y="53" fill="#0759a6" font-family="sans-serif" font-size="12">每周期 16 个采样点</text>
+<text x="685.0" y="368" text-anchor="middle" font-family="sans-serif" font-size="13">I（归一化幅度）</text>
+<text x="560" y="390" font-family="sans-serif" font-size="12">Q（归一化幅度）</text>
+<text x="30" y="402" font-family="sans-serif" font-size="12">实际 GNU 数据；不是 Master 截图；连线仅连接样本。星座图中每个圆点表示一个采样位置。</text></svg>

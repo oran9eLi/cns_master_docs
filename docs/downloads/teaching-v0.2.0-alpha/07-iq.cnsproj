@@ -1,0 +1,125 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/42b1c39e-d2f6-5237-8040-b494e34abfa4/node/tone/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "iq",
+                "number": 1,
+                "persistentId": "92b003ef-9441-5c58-a878-e3ecbc491e4a",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 60,
+                    "y": 60
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/42b1c39e-d2f6-5237-8040-b494e34abfa4/node/tone/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "constellation",
+                "number": 2,
+                "persistentId": "ee79b470-c74a-5dc0-8923-50cfdfe943fa",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 105,
+                    "y": 105
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/42b1c39e-d2f6-5237-8040-b494e34abfa4/node/split/i"
+                    },
+                    {
+                        "colorIndex": 1,
+                        "variableId": "project/42b1c39e-d2f6-5237-8040-b494e34abfa4/node/split/q"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 3,
+                "persistentId": "ff0dcd31-cfca-5e9d-8ef9-203bb124207f",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 150,
+                    "y": 150
+                }
+            }
+        ]
+    },
+    "formatVersion": 12,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "tone",
+                "fromPort": "out",
+                "id": "edge-1",
+                "toNode": "split",
+                "toPort": "in"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "tone",
+                "moduleType": "complex_signal_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 1,
+                    "frequency_hz": 64,
+                    "offset_imag": 0,
+                    "offset_real": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 1024,
+                    "waveform": "cosine"
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "split",
+                "moduleType": "iq_split",
+                "moduleVersion": 5,
+                "number": 1,
+                "parameters": {
+                    "vlen": 1
+                },
+                "x": 340,
+                "y": 0
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "42b1c39e-d2f6-5237-8040-b494e34abfa4",
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}
