@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="335" viewBox="0 0 900 335">
 <rect width="900" height="335" fill="white"/>
-<text x="30" y="25" font-family="sans-serif" font-size="17">04：两帧真实频谱组成的瀑布（N=1024，Fs=1024 item/s）</text>
+<text x="30" y="25" font-family="sans-serif" font-size="17">04 两帧频谱组成的瀑布（N=1024，Fs=1024 item/s）</text>
 <rect x="75.00" y="60.00" width="1.38" height="90.00" fill="rgb(250,255,255)"/>
 <rect x="76.33" y="60.00" width="1.38" height="90.00" fill="rgb(250,255,255)"/>
 <rect x="77.65" y="60.00" width="1.38" height="90.00" fill="rgb(250,255,255)"/>
@@ -1038,4 +1038,4 @@
 <text x="755.0" y="262" text-anchor="middle" font-family="sans-serif" font-size="13">512</text>
 <text x="340" y="285" font-family="sans-serif" font-size="14">频率 / Hz</text>
 <text x="30" y="306" font-family="sans-serif" font-size="12">纵轴：FFT 窗起点 / s。颜色越深幅度越大；相对归一化参考幅度 1，截取 −80 至 0 dB。</text>
-<text x="30" y="325" font-family="sans-serif" font-size="12">实际 GNU 频谱数据；不是 Master 截图。这里只显示自动有限运行的两帧。</text></svg>
+<text x="30" y="325" font-family="sans-serif" font-size="12">每行对应一个 FFT 窗；64 Hz 和 256 Hz 处的色带表示这两个频率分量。</text></svg>

@@ -1,0 +1,219 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/274d08a5-4123-54e6-bc9a-3eea0cc446be/node/mapper/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "constellation",
+                "number": 1,
+                "persistentId": "6f4726f3-1618-598d-9c9b-99a4b9328e60",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 80,
+                    "y": 80
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/274d08a5-4123-54e6-bc9a-3eea0cc446be/node/symbols/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 2,
+                "persistentId": "853e5327-72fe-5f4e-b6f9-4b66d29f383f",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 130,
+                    "y": 130
+                }
+            }
+        ]
+    },
+    "formatVersion": 12,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "symbols",
+                "fromPort": "out",
+                "id": "edge-1",
+                "toNode": "mapper",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "mapper",
+                "fromPort": "out",
+                "id": "edge-2",
+                "toNode": "direct",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "mapper",
+                "fromPort": "out",
+                "id": "edge-3",
+                "toNode": "channel",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "channel",
+                "fromPort": "out",
+                "id": "edge-4",
+                "toNode": "received",
+                "toPort": "in"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "symbols",
+                "moduleType": "random_symbols",
+                "moduleVersion": 4,
+                "number": 1,
+                "parameters": {
+                    "constellation": "qpsk",
+                    "dimensionality": 1,
+                    "maximum": 4,
+                    "minimum": 0,
+                    "normalization": "none",
+                    "points_imag": [
+                        -0.7071067811865475,
+                        0.7071067811865475,
+                        -0.7071067811865475,
+                        0.7071067811865475
+                    ],
+                    "points_real": [
+                        -0.7071067811865475,
+                        -0.7071067811865475,
+                        0.7071067811865475,
+                        0.7071067811865475
+                    ],
+                    "sample_rate_hz": 4096,
+                    "seed": 7,
+                    "seed_mode": "fixed"
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "mapper",
+                "moduleType": "symbol_mapper",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "constellation": "qpsk",
+                    "dimensionality": 1,
+                    "normalization": "none",
+                    "points_imag": [
+                        -0.7071067811865475,
+                        0.7071067811865475,
+                        -0.7071067811865475,
+                        0.7071067811865475
+                    ],
+                    "points_real": [
+                        -0.7071067811865475,
+                        -0.7071067811865475,
+                        0.7071067811865475,
+                        0.7071067811865475
+                    ]
+                },
+                "x": 300,
+                "y": 0
+            },
+            {
+                "id": "direct",
+                "moduleType": "symbol_slicer",
+                "moduleVersion": 4,
+                "number": 1,
+                "parameters": {
+                    "constellation": "qpsk",
+                    "dimensionality": 1,
+                    "normalization": "none",
+                    "points_imag": [
+                        -0.7071067811865475,
+                        0.7071067811865475,
+                        -0.7071067811865475,
+                        0.7071067811865475
+                    ],
+                    "points_real": [
+                        -0.7071067811865475,
+                        -0.7071067811865475,
+                        0.7071067811865475,
+                        0.7071067811865475
+                    ]
+                },
+                "x": 600,
+                "y": 0
+            },
+            {
+                "id": "channel",
+                "moduleType": "channel_model",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "block_tags": false,
+                    "epsilon": 1,
+                    "frequency_hz": 0,
+                    "noise_amplitude": 0,
+                    "noise_seed": 7,
+                    "seed_mode": "fixed",
+                    "taps_imag": [
+                        0
+                    ],
+                    "taps_real": [
+                        1
+                    ]
+                },
+                "x": 900,
+                "y": 0
+            },
+            {
+                "id": "received",
+                "moduleType": "symbol_slicer",
+                "moduleVersion": 4,
+                "number": 2,
+                "parameters": {
+                    "constellation": "qpsk",
+                    "dimensionality": 1,
+                    "normalization": "none",
+                    "points_imag": [
+                        -0.7071067811865475,
+                        0.7071067811865475,
+                        -0.7071067811865475,
+                        0.7071067811865475
+                    ],
+                    "points_real": [
+                        -0.7071067811865475,
+                        -0.7071067811865475,
+                        0.7071067811865475,
+                        0.7071067811865475
+                    ]
+                },
+                "x": 0,
+                "y": 230
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "274d08a5-4123-54e6-bc9a-3eea0cc446be",
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}

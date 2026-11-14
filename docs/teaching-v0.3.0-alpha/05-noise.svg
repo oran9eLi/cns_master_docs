@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="410" viewBox="0 0 900 410">
 <rect width="100%" height="100%" fill="white"/>
-<text x="30" y="26" font-family="sans-serif" font-size="17">05-noise：真实 GNU 运行数据（2048 项）</text>
+<text x="30" y="26" font-family="sans-serif" font-size="17">05 从叠加噪声认识波动</text>
 <rect x="65" y="75" width="350" height="250" fill="none" stroke="#333"/>
 <text x="65.0" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">0</text>
 <text x="58" y="329.0" text-anchor="end" font-family="sans-serif" font-size="12">-1.43</text>
@@ -547,4 +547,4 @@
 <text x="510" y="69" fill="#a84b0c" font-family="sans-serif" font-size="12">噪声幅度改为 0.8</text>
 <text x="685.0" y="368" text-anchor="middle" font-family="sans-serif" font-size="13">时间 / ms</text>
 <text x="510" y="390" font-family="sans-serif" font-size="12">单参数对照</text>
-<text x="30" y="402" font-family="sans-serif" font-size="12">实际 GNU 数据；不是 Master 截图；连线仅连接样本。星座图中每个圆点表示一个采样位置。</text></svg>
+<text x="30" y="402" font-family="sans-serif" font-size="12">圆点表示采样值，连线便于跟踪相邻样本；比较曲线时注意各图的坐标单位。</text></svg>

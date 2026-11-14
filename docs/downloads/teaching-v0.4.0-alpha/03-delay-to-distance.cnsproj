@@ -1,0 +1,277 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/3844618e-98c1-50ca-9804-66ebeb209dcf/node/reference/out"
+                    },
+                    {
+                        "colorIndex": 1,
+                        "variableId": "project/3844618e-98c1-50ca-9804-66ebeb209dcf/node/delayed/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "bb41031b-c51d-4799-bf93-5b7c7e7b711b",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 95,
+                    "y": 95
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/3844618e-98c1-50ca-9804-66ebeb209dcf/node/correlation/correlation"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 2,
+                "persistentId": "ebc1f1f0-6422-412e-bd80-622b4ef55596",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 130,
+                    "y": 130
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/3844618e-98c1-50ca-9804-66ebeb209dcf/node/peak/lag_samples"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 3,
+                "persistentId": "9fde24f7-3988-4efb-9984-f4b5d70fb62d",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 165,
+                    "y": 165
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/3844618e-98c1-50ca-9804-66ebeb209dcf/node/peak/peak_value"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 4,
+                "persistentId": "3beebbf0-ec37-49b4-837c-f8daad5c6a52",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 200,
+                    "y": 200
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/3844618e-98c1-50ca-9804-66ebeb209dcf/node/peak/delay_s"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 5,
+                "persistentId": "a532515e-0839-4861-8597-e39988c8d292",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 235,
+                    "y": 235
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/3844618e-98c1-50ca-9804-66ebeb209dcf/node/distance/distance"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 6,
+                "persistentId": "27b23c84-7498-44f7-bdfc-c44f2d153fb7",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 270,
+                    "y": 270
+                }
+            }
+        ]
+    },
+    "formatVersion": 15,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "reference",
+                "fromPort": "out",
+                "id": "edge-1",
+                "toNode": "delayed",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "reference",
+                "fromPort": "out",
+                "id": "edge-2",
+                "toNode": "correlation",
+                "toPort": "ref"
+            },
+            {
+                "fromNode": "delayed",
+                "fromPort": "out",
+                "id": "edge-3",
+                "toNode": "correlation",
+                "toPort": "rx"
+            },
+            {
+                "fromNode": "correlation",
+                "fromPort": "correlation",
+                "id": "edge-4",
+                "toNode": "peak",
+                "toPort": "correlation"
+            },
+            {
+                "fromNode": "peak",
+                "fromPort": "delay_s",
+                "id": "edge-5",
+                "toNode": "distance",
+                "toPort": "delay_s"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "reference",
+                "moduleType": "vector_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "data_imag": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "data_real": [
+                        1,
+                        2,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "element_type": "numeric_f64",
+                    "sample_rate_hz": 1000,
+                    "symbol_count": 2,
+                    "tags": [
+                    ],
+                    "vlen": 1
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "delayed",
+                "moduleType": "delay",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "delay_samples": 2,
+                    "element_type": "numeric_f64",
+                    "num_ports": 1,
+                    "vlen": 1
+                },
+                "x": 340,
+                "y": 0
+            },
+            {
+                "id": "correlation",
+                "moduleType": "correlator",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "frame_length": 8
+                },
+                "x": 680,
+                "y": 0
+            },
+            {
+                "id": "peak",
+                "moduleType": "peak_detector",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "frame_length": 8,
+                    "min_abs_peak": 0
+                },
+                "x": 0,
+                "y": 260
+            },
+            {
+                "id": "distance",
+                "moduleType": "range_estimator",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "propagation_speed_m_s": 340,
+                    "round_trip": true
+                },
+                "x": 340,
+                "y": 260
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "3844618e-98c1-50ca-9804-66ebeb209dcf",
+    "simulationSpeed": 1,
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}

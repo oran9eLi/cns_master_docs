@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="410" viewBox="0 0 900 410">
 <rect width="100%" height="100%" fill="white"/>
-<text x="30" y="26" font-family="sans-serif" font-size="17">07-iq：真实 GNU 运行数据（2048 项）</text>
+<text x="30" y="26" font-family="sans-serif" font-size="17">07 用两个坐标表示幅度和相位</text>
 <rect x="65" y="75" width="350" height="250" fill="none" stroke="#333"/>
 <text x="65.0" y="343" text-anchor="middle" font-family="sans-serif" font-size="12">0</text>
 <text x="58" y="329.0" text-anchor="end" font-family="sans-serif" font-size="12">-1.16</text>
@@ -112,4 +112,4 @@
 <text x="560" y="53" fill="#0759a6" font-family="sans-serif" font-size="12">每周期 16 个采样点</text>
 <text x="685.0" y="368" text-anchor="middle" font-family="sans-serif" font-size="13">I（归一化幅度）</text>
 <text x="560" y="390" font-family="sans-serif" font-size="12">Q（归一化幅度）</text>
-<text x="30" y="402" font-family="sans-serif" font-size="12">实际 GNU 数据；不是 Master 截图；连线仅连接样本。星座图中每个圆点表示一个采样位置。</text></svg>
+<text x="30" y="402" font-family="sans-serif" font-size="12">左右两图表示同一复数信号；星座图的 I、Q 轴使用相同刻度。</text></svg>

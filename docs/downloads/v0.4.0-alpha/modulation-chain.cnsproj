@@ -1,0 +1,222 @@
+{
+    "analysis": {
+        "tools": [
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/5d342918-b2ce-5ba4-9876-631af0411767/node/magphase/magnitude"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 1,
+                "persistentId": "40a766f7-730c-5cc0-b057-2fd68f996fd9",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 80,
+                    "y": 80
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/5d342918-b2ce-5ba4-9876-631af0411767/node/magphase/phase"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 2,
+                "persistentId": "c485f935-853d-5ffa-a040-d9801fd27074",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 130,
+                    "y": 130
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/5d342918-b2ce-5ba4-9876-631af0411767/node/demod/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "overlay",
+                "number": 3,
+                "persistentId": "4a081b25-ad29-5fce-945a-c043385c7e83",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 180,
+                    "y": 180
+                }
+            },
+            {
+                "captures": [
+                    {
+                        "colorIndex": 0,
+                        "variableId": "project/5d342918-b2ce-5ba4-9876-631af0411767/node/mapper/out"
+                    }
+                ],
+                "kind": "observer",
+                "maxPoints": 2048,
+                "mode": "constellation",
+                "number": 4,
+                "persistentId": "e4731ee7-830e-56af-805c-5884551cc016",
+                "refreshHz": 10,
+                "visible": true,
+                "windowLayout": {
+                    "height": 600,
+                    "tab": 0,
+                    "width": 840,
+                    "x": 230,
+                    "y": 230
+                }
+            }
+        ]
+    },
+    "formatVersion": 12,
+    "graph": {
+        "connections": [
+            {
+                "fromNode": "constant",
+                "fromPort": "out",
+                "id": "edge-1",
+                "toNode": "fm",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "fm",
+                "fromPort": "out",
+                "id": "edge-2",
+                "toNode": "magphase",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "fm",
+                "fromPort": "out",
+                "id": "edge-3",
+                "toNode": "demod",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "demod",
+                "fromPort": "out",
+                "id": "edge-4",
+                "toNode": "binary",
+                "toPort": "in"
+            },
+            {
+                "fromNode": "binary",
+                "fromPort": "out",
+                "id": "edge-5",
+                "toNode": "mapper",
+                "toPort": "in"
+            }
+        ],
+        "nodes": [
+            {
+                "id": "constant",
+                "moduleType": "signal_source",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "amplitude": 1,
+                    "frequency_hz": 0,
+                    "offset": 0,
+                    "phase_rad": 0,
+                    "sample_rate_hz": 4096,
+                    "waveform": "constant"
+                },
+                "x": 0,
+                "y": 0
+            },
+            {
+                "id": "fm",
+                "moduleType": "frequency_modulator",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "sensitivity": 0.39269908169872414
+                },
+                "x": 300,
+                "y": 0
+            },
+            {
+                "id": "magphase",
+                "moduleType": "magphase_split",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                },
+                "x": 600,
+                "y": 0
+            },
+            {
+                "id": "demod",
+                "moduleType": "quadrature_demod",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                    "gain": 2.5464790894703255
+                },
+                "x": 900,
+                "y": 0
+            },
+            {
+                "id": "binary",
+                "moduleType": "binary_slicer",
+                "moduleVersion": 1,
+                "number": 1,
+                "parameters": {
+                },
+                "x": 0,
+                "y": 230
+            },
+            {
+                "id": "mapper",
+                "moduleType": "symbol_mapper",
+                "moduleVersion": 6,
+                "number": 1,
+                "parameters": {
+                    "constellation": "bpsk",
+                    "dimensionality": 1,
+                    "normalization": "none",
+                    "points_imag": [
+                        0,
+                        0
+                    ],
+                    "points_real": [
+                        -1,
+                        1
+                    ]
+                },
+                "x": 300,
+                "y": 230
+            }
+        ]
+    },
+    "lastRun": null,
+    "projectId": "5d342918-b2ce-5ba4-9876-631af0411767",
+    "spectrum": {
+        "fft_length": 1024,
+        "overlap_percent": 0,
+        "window": "hann_periodic"
+    }
+}
